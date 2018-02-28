@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sugar.lightcontrol.mvp.ui.customview.SwipeItemLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/margin_50"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/device_item_rl"
+        app:layout_itemType="main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/margin_30"
+        android:paddingRight="@dimen/margin_20"
+        android:background="?android:attr/selectableItemBackground">
+        <TextView
+            android:id="@+id/device_name_tv"
+            style="@style/Text_Black_12"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:id="@+id/device_set_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_setting"
+            android:background="?android:attr/selectableItemBackground"/>
+    </RelativeLayout>
+    
+    <Button
+        app:layout_itemType="menu"
+        android:id="@+id/device_delete_bt"
+        android:layout_width="@dimen/margin_80"
+        android:layout_height="match_parent"
+        android:background="@drawable/black_selector"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_size_12"
+        android:text="@string/DELETE"/>
+
+</sugar.lightcontrol.mvp.ui.customview.SwipeItemLayout>
