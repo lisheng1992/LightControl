@@ -43,11 +43,11 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
         super.onDestroy();
         RefWatcher refWatcher = BaseApplication.getRefWatcher(this);
         refWatcher.watch(this);
-        if (unbinder != null) {
-            unbinder.unbind();
-        }
         if (mPresenter != null) {
             mPresenter.onDestroy();
+        }
+        if (unbinder != null) {
+            unbinder.unbind();
         }
     }
 }
